@@ -1,0 +1,7 @@
+# Ignore all files and dirs with "export-ignore".
+/.editorconfig      export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/CONTRIBUTING.md    export-ignore
+/phpunit.xml.dist   export-ignore
+/tests              export-ignore

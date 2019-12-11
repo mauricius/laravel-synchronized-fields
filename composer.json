@@ -1,0 +1,67 @@
+{
+    "name": "mauricius/laravel-synchronized-fields",
+    "description": "Synchronize JSON fields between different storage mechanisms",
+    "keywords": [
+        "laravel"
+    ],
+    "homepage": "https://github.com/mauricius/laravel-synchronized-fields",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maurizio Bonani",
+            "email": "maurizio.bonani@gmail.com",
+            "homepage": "https://mauricius.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "illuminate/support": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0",
+        "illuminate/database": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "orchestra/testbench": "^3.5 || ^3.6 || ^3.7 || ^3.8 || ^4.0",
+        "phpunit/phpunit": "^8.0",
+        "aws/aws-sdk-php": "^3.67"
+    },
+    "suggest": {
+        "league/flysystem-aws-s3-v3": "Required to use AWS S3 file storage",
+        "aws/aws-sdk-php": "Required to use AWS DynamoDB"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mauricius\\SynchronizedFields\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mauricius\\SynchronizedFields\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "format": [
+            "vendor/bin/php-cs-fixer fix"
+        ],
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "support": {
+        "issues": "https://github.com/mauricius/laravel-synchronized-fields",
+        "source": "https://github.com/mauricius/laravel-synchronized-fields"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mauricius\\SynchronizedFields\\SynchronizedFieldsServiceProvider"
+            ]
+        }
+    }
+}
