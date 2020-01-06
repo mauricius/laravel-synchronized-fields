@@ -128,6 +128,10 @@ class SynchronizedFieldsObserver implements ObserverContract
      */
     public function forceSynchonization(Model $model)
     {
+        if (! $model->getSynchronizedFields()) {
+            return;
+        }
+
         $updated = $this->storage->persist($model, $model->getSynchronizedFields());
 
         if (Config::get('synchronized-fields.replicate') === false) {
