@@ -10,10 +10,8 @@ trait SynchronizedFields
     /**
      * Boot the Trait
      */
-    public static function boot()
+    public static function bootSynchronizedFields()
     {
-        parent::boot();
-
         static::observe(App::make(ObserverContract::class));
     }
 
