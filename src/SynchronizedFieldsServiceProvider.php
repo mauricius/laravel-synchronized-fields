@@ -89,13 +89,13 @@ class SynchronizedFieldsServiceProvider extends ServiceProvider
         $this->app->singleton(DynamoDbClient::class, function () {
             return new DynamoDbClient(
                 [
-                'endpoint' => $this->app['config']->get('synchronized-fields.dynamo.endpoint'),
-                'region' => $this->app['config']->get('synchronized-fields.dynamo.region'),
-                'version' => $this->app['config']->get('synchronized-fields.dynamo.version'),
-                'credentials' => [
-                'key' => $this->app['config']->get('synchronized-fields.dynamo.credentials.key'),
-                'secret' => $this->app['config']->get('synchronized-fields.dynamo.credentials.secret')
-                ]
+                    'endpoint' => $this->app['config']->get('synchronized-fields.dynamo.endpoint'),
+                    'region' => $this->app['config']->get('synchronized-fields.dynamo.region'),
+                    'version' => $this->app['config']->get('synchronized-fields.dynamo.version'),
+                    'credentials' => [
+                        'key' => $this->app['config']->get('synchronized-fields.dynamo.credentials.key'),
+                        'secret' => $this->app['config']->get('synchronized-fields.dynamo.credentials.secret')
+                    ]
                 ]
             );
         });

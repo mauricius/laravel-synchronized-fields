@@ -139,6 +139,16 @@ $post = Post::ignoringSynchronizedFields(['metadata'], function () {
 });
 ```
 
+## Notes
+
+You might want to disable entirely the package when testing your application. You can do this by setting the `SYNCHRONIZED_FIELDS_ENABLED` env variable to `false`. For example in `phpunit.xml`
+
+```xml
+<php>
+    <env name="SYNCHRONIZED_FIELDS_ENABLED" value="false"/>
+</php>
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

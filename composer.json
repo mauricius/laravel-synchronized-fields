@@ -2,7 +2,9 @@
     "name": "mauricius/laravel-synchronized-fields",
     "description": "Synchronize JSON fields between different storage mechanisms",
     "keywords": [
-        "laravel"
+        "php",
+        "laravel",
+        "json"
     ],
     "homepage": "https://github.com/mauricius/laravel-synchronized-fields",
     "license": "MIT",
@@ -21,7 +23,6 @@
         "illuminate/database": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.14",
         "orchestra/testbench": "^3.5 || ^3.6 || ^3.7 || ^3.8 || ^4.0",
         "phpunit/phpunit": "^8.0",
         "aws/aws-sdk-php": "^3.67"
@@ -44,9 +45,6 @@
         }
     },
     "scripts": {
-        "format": [
-            "vendor/bin/php-cs-fixer fix"
-        ],
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
@@ -54,14 +52,16 @@
         "issues": "https://github.com/mauricius/laravel-synchronized-fields",
         "source": "https://github.com/mauricius/laravel-synchronized-fields"
     },
-    "config": {
-        "sort-packages": true
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "Mauricius\\SynchronizedFields\\SynchronizedFieldsServiceProvider"
             ]
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
